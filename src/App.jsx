@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Controls from "./Controls";
 import Drumpads from "./Drumpads";
