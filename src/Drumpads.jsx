@@ -24,7 +24,7 @@ function Drumpads({ passToParent, passElements, newAudioType, muted }) {
       pianoName: "Chord_1",
       pianoLink: "/drum-machine/Piano/Chord_1.mp3",
       heaterName: "heater_1",
-      heaterLink: "/drum-machine/Heater/Heater-1.mp3",
+      heaterLink: "/drum-machine/Heat/Heater-1.mp3",
       letter: "Q",
       click: "One",
     },
