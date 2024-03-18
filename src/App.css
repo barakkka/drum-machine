@@ -1,0 +1,157 @@
+:root {
+  --background: rgb(141, 141, 141);
+  --border: rgb(255, 165, 0);
+  --foreground: rgb(179, 179, 179);
+  --button-colors: rgb(128, 128, 128);
+  --scroller-background: rgb(66, 66, 66);
+  --green: green;
+  --red: red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: var(--background);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#drum-machine {
+  width: 40rem;
+  height: 20rem;
+  border: 0.4rem solid var(--border);
+  background-color: var(--foreground);
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+}
+#padsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 53%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-top: 25%;
+  transform: translateY(-50%);
+}
+.drum-pad {
+  width: 6.4rem;
+  height: 5rem;
+  background-color: var(--button-colors);
+  border-radius: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 5px 5px 1px;
+  font-weight: 900;
+}
+.clicked {
+  animation: buttonAnimation 0.1s linear;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    background-color: var(--button-colors);
+    transform: scale(1);
+  }
+  1% {
+    background-color: var(--border);
+    transform: scale(0.9);
+  }
+  100% {
+    background-color: var(--border);
+  }
+}
+
+.controls {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#display {
+  width: 10rem;
+  height: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 10px;
+  background-color: var(--button-colors);
+}
+.control {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.toggleContainer {
+  width: 3rem;
+  height: 1.3rem;
+  background-color: black;
+  padding: 3px;
+  border-radius: 15px;
+}
+.toggle {
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+  transition: margin 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#powerToggle .toggle {
+  background-color: var(--green);
+  margin-left: 23px;
+}
+#bankToggle .toggle {
+  background-color: blue;
+  margin-left: 0;
+}
+
+.control p {
+  margin: 0;
+  font-weight: bolder;
+}
+#scrollBar {
+  position: relative;
+  width: 14rem;
+  height: 4px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px 0 black;
+  background-color: var(--scroller-background);
+  border-radius: 3px;
+}
+#slider {
+  position: absolute;
+  height: 1.5rem;
+  width: 0.5rem;
+  background: linear-gradient(to bottom, rgb(0, 0, 95), blue, rgb(0, 0, 95));
+  transform: translateY(-40%);
+  border-radius: 3px;
+  left: 50%;
+}
+
+#developerDiv {
+  text-align: center;
+}
+#developer {
+  color: blue;
+}
+
+@media screen and (width <= 670px) {
+  #drum-machine {
+    flex-direction: column;
+    height: 35rem;
+    width: 25rem;
+  }
+  #padsContainer {
+    width: 92%;
+    margin-top: 0;
+    transform: none;
+  }
+  .controls {
+    width: 100%;
+  }
+}
