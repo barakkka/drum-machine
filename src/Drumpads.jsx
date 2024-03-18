@@ -22,9 +22,9 @@ function Drumpads({ passToParent, passElements, newAudioType, muted }) {
   const kitsArr = [
     {
       pianoName: "Chord_1",
-      pianoLink: "../public/Piano/Chord_1.mp3",
+      pianoLink: "/drum-machine/Piano/Chord_1.mp3",
       heaterName: "heater_1",
-      heaterLink: "../public/Heater/Heater-1.mp3",
+      heaterLink: "/drum-machine/Heater/Heater-1.mp3",
       letter: "Q",
       click: "One",
     },
